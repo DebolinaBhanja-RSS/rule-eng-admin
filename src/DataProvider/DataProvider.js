@@ -6,7 +6,7 @@ const apiUrl = 'http://localhost:3000';
 const httpClient = fetchUtils.fetchJson;
 
 // TypeScript users must reference the type `DataProvider`
-export const dataProvider = {
+export default {
     getList: (resource, params) => {
         const { page, perPage } = params.pagination;
         const { field, order } = params.sort;
@@ -63,7 +63,7 @@ export const dataProvider = {
 
     updateMany: (resource, params) => {
         const query = {
-            filter: JSON.stringify({ id: params.ids}),
+            filter: JSON.stringify({ id: params.ids }),
         };
         return httpClient(`${apiUrl}/${resource}?${stringify(query)}`, {
             method: 'PUT',
@@ -74,7 +74,7 @@ export const dataProvider = {
     create: (resource, params) => {
         return httpClient(`${apiUrl}/${resource}`, {
             method: 'POST',
-            body: JSON.stringify({"rulenamespace": params.data.rulenamespace, "category" :  params.data.category, "inputset" : JSON.parse(localStorage.SelectedCategory)}),
+            body: JSON.stringify({ "rulenamespace": params.data.rulenamespace, "category": params.data.category, "inputset": JSON.parse(localStorage.SelectedCategory) }),
         }).then(({ json }) => ({
             data: { ...params.data, id: json.id },
         }));
@@ -87,7 +87,7 @@ export const dataProvider = {
 
     deleteMany: (resource, params) => {
         const query = {
-            filter: JSON.stringify({ id: params.ids}),
+            filter: JSON.stringify({ id: params.ids }),
         };
         return httpClient(`${apiUrl}/${resource}?${stringify(query)}`, {
             method: 'DELETE',
