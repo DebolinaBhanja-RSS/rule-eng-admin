@@ -1,0 +1,102 @@
+{
+  "rulenamespace": [
+    {
+      "id": 1,
+      "rulenamespace": "json-server"
+    },
+    {
+      "rulenamespace": "ROUTING",
+      "category": "inputType",
+      "operations": "equals",
+      "inputset": [
+        {
+          "Type": "componentType",
+          "Value": "overlayAPI"
+        },
+        {
+          "Type": "stateCode",
+          "Value": "DISPATCHED_CANCEL"
+        },
+        {
+          "Type": "messageType",
+          "Value": "camt.056"
+        }
+      ],
+      "id": 13
+    },
+    {
+      "rulenamespace": "ROUTING",
+      "category": "inputType",
+      "operations": "equals",
+      "inputset": [
+        {
+          "Type": "componentType",
+          "Value": "overlayAPI"
+        },
+        {
+          "Type": "stateCode",
+          "Value": "RECEIVED_FROM_BANK"
+        },
+        {
+          "Type": "messageType",
+          "Value": "camt.029"
+        }
+      ],
+      "id": 14
+    },
+    {
+      "rulenamespace": "ROUTING",
+      "category": "inputType",
+      "operations": "equals",
+      "inputset": [
+        {
+          "Type": "componentType",
+          "Value": "overlayAPI"
+        },
+        {
+          "Type": "stateCode",
+          "Value": "VALIDATE"
+        },
+        {
+          "Type": "messageType",
+          "Value": "camt.026"
+        }
+      ],
+      "id": 15
+    },
+    {
+      "rulenamespace": "ROUTING",
+      "category": "input",
+      "inputset": [
+        {
+          "Type": "componentType",
+          "Operation": "equals",
+          "Value": "overlayAPI"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "rulenamespace": "ROUTING",
+      "category": "input",
+      "inputset": [
+        {
+          "Type": "componentType",
+          "Operation": "equals",
+          "Value": "overlayAPI"
+        },
+        {
+          "Type": "stateCode",
+          "Operation": "equals",
+          "Value": "DISPATCHED"
+        },
+        {
+          "Type": "messageType",
+          "Operation": "equals",
+          "Value": "camt.026"
+        }
+      ],
+      "id": 17
+    }
+  ]
+}
